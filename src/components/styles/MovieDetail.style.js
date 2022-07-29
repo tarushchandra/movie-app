@@ -8,6 +8,13 @@ export const StyledMovieDetail = styled.div`
   min-height: 100vh;
   margin-left: 250px;
 
+  .loading {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .movie-detail-card {
     background-color: #292828;
     display: flex;

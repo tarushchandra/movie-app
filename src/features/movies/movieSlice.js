@@ -51,6 +51,9 @@ const movieSlice = createSlice({
     changeContentType: (state, action) => {
       state.contentType = action.payload;
     },
+    cleanUp: (state) => {
+      state.movieDetails = {};
+    },
   },
   extraReducers: {
     [fetchMovies.pending]: (state) => {
@@ -77,6 +80,7 @@ export const {
   decrementPage,
   defaultPage,
   changeContentType,
+  cleanUp,
 } = movieSlice.actions;
 export const getAllMovies = (state) => state.movies.movies;
 export const getMovieDetail = (state) => state.movies.movieDetails;
